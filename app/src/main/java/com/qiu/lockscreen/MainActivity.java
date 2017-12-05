@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
         // 判断该组件是否有系统管理员的权限
         if (mDevicePolicyManager.isAdminActive(mComponentName)) {
-            finish();
             mDevicePolicyManager.lockNow(); //锁屏
+            finish();
         } else {
             activeManager();    //激活权限
         }
